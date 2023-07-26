@@ -14,10 +14,10 @@
 
       <ion-list>
         <ion-item>
-          <ion-avatar>
+          <ion-avatar slot="start">
             <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
           </ion-avatar>
-          <ion-label style="margin-left: 1rem">Pokémon Yellow</ion-label>
+          <ion-label>Mr Tan Siu Ling</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
