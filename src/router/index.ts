@@ -22,13 +22,21 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'help',
-        component: () => import('@/views/HomeHelpPage.vue')
+        component: () => import('@/views/HomeHelpPage.vue'),
       },
       {
         path: 'chat',
         component: () => import('@/views/HomeChatPage.vue')
       }
-    ]
+    ],
+  },
+  {
+    path: '/home/help/:question',
+    component: () => import('@/views/HomeHelpDetailsPage.vue'),
+  },
+  {
+    path: '/home/help/new',
+    component: () => import('@/views/HomeHelpNewPage.vue'),
   }
 ]
 

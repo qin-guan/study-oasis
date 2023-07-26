@@ -37,8 +37,7 @@
           Take a photo of a question and request for assistance!
         </ion-card-content>
 
-        <ion-button fill="clear">Take photo</ion-button>
-        <ion-button fill="clear">Open gallery</ion-button>
+        <ion-button fill="clear" @click="selectPhoto">Select photo</ion-button>
       </ion-card>
 
       <div class="ion-padding">
@@ -46,23 +45,8 @@
       </div>
 
       <ion-list>
-        <ion-item>
-          <ion-label>Quadratic equation??</ion-label>
-          <ion-note>7:55pm</ion-note>
-        </ion-item>
-
-        <ion-item>
-          <ion-label>English MCQ???</ion-label>
-          <ion-note>7:55pm</ion-note>
-        </ion-item>
-
-        <ion-item>
-          <ion-label>我不会做</ion-label>
-          <ion-note>7:55pm</ion-note>
-        </ion-item>
-
-        <ion-item>
-          <ion-label>Checked in to Clementi 123 Oasis</ion-label>
+        <ion-item  @click="click(item)" button v-for="item in items">
+          <ion-label>{{ item }}</ion-label>
           <ion-note>7:55pm</ion-note>
         </ion-item>
       </ion-list>
@@ -71,5 +55,26 @@
 </template>
 
 <script setup lang="ts">
-import { IonSelect, IonSelectOption, IonButton, IonAvatar, IonCard, IonNote, IonItemSliding, IonItemOption, IonItemOptions, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonListHeader, IonItem, IonLabel, IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonSelect, IonNavLink, IonSelectOption, IonButton, IonAvatar, IonCard, IonNote, IonItemSliding, IonItemOption, IonItemOptions, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonListHeader, IonItem, IonLabel, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, useIonRouter } from '@ionic/vue';
+import { usePhotoGallery } from '@/composables/use-photo-gallery'
+
+const { takePhoto } = usePhotoGallery()
+
+const items = [
+  'Quadratic equation??',
+  'Math???',
+  'Oh no!!',
+  'Sad'
+]
+
+const router = useIonRouter()
+
+function click(item: string) {
+  router.push(`/home/help/${item}`)
+}
+
+async function selectPhoto() {
+  await takePhoto()
+  router.push('/home/help/new')
+}
 </script>
