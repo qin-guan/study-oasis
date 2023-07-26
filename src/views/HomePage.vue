@@ -3,19 +3,19 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab1" href="/tabs/tab1">
+        <ion-tab-button tab="dashboard" href="/home/dashboard">
           <ion-icon aria-hidden="true" :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
+          <ion-label>Dashboard</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab2" href="/tabs/tab2">
+        <ion-tab-button tab="help" href="/home/help">
           <ion-icon aria-hidden="true" :icon="ellipse" />
-          <ion-label>Tab 2</ion-label>
+          <ion-label>Help</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab3" href="/tabs/tab3">
+        <ion-tab-button tab="chat" href="/home/chat">
           <ion-icon aria-hidden="true" :icon="square" />
-          <ion-label>Tab 3</ion-label>
+          <ion-label>Chat</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
