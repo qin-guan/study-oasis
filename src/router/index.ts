@@ -27,8 +27,16 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'chat',
         component: () => import('@/views/HomeChatPage.vue')
+      },
+      {
+        path: 'forum',
+        component: () => import('@/views/HomeForumPage.vue')
       }
     ],
+  },
+  {
+    path: '/home/forum/:id',
+    component: () => import('@/views/HomeForumDetailsPage.vue')
   },
   {
     path: '/home/chat/details',

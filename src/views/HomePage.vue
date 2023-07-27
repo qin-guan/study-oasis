@@ -17,6 +17,11 @@
           <ion-icon aria-hidden="true" :icon="square" />
           <ion-label>Chat</ion-label>
         </ion-tab-button>
+
+        <ion-tab-button tab="forum" href="/home/forum">
+          <ion-icon aria-hidden="true" :icon="chatbox" />
+          <ion-label>Forum</ion-label>
+        </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -24,5 +29,5 @@
 
 <script setup lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { ellipse, square, triangle, chatbox} from 'ionicons/icons';
 </script>
