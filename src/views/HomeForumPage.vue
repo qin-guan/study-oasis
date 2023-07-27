@@ -36,6 +36,12 @@ const forums = [
   "Additional Mathematics",
   "Biology",
   "Physics",
-  "Chemistry"
+  "Chemistry",
+  'Social Studies',
+  'Geography',
+  'History',
+  'Tamil',
+  'Mandarin',
+  'Malay'
 ]
 </script>

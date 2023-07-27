@@ -20,9 +20,7 @@
           </ion-label>
 
           <select>
-            <option>Mathematics</option>
-            <option>English</option>
-            <option>Chinese</option>
+            <option v-for="subject in subjects">{{subject}}</option>
           </select>
         </ion-item>
       </ion-list>
@@ -62,9 +60,9 @@ const { takePhoto } = usePhotoGallery()
 
 const items = [
   'Quadratic equation??',
-  'Math???',
-  'Oh no!!',
-  'Sad'
+  'Calculus???',
+  'How to solve differential',
+  'What is Maxwells formula'
 ]
 
 const router = useIonRouter()
@@ -77,4 +75,20 @@ async function selectPhoto() {
   await takePhoto()
   router.push('/home/help/new')
 }
+
+
+const subjects = [
+  "English",
+  "Mathematics",
+  "Additional Mathematics",
+  "Biology",
+  "Physics",
+  "Chemistry",
+  'Social Studies',
+  'Geography',
+  'History',
+  'Tamil',
+  'Mandarin',
+  'Malay'
+]
 </script>

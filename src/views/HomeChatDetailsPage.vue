@@ -21,30 +21,38 @@
 
       <ion-list lines="none">
         <ion-item>
+          <div style="display: flex; flex-direction: column; max-width: 70%">
+            <small>Mr Tan</small>
+            <div style="border-radius: 10px; background: #047857; padding: 8px; margin-top: 3px;">
+              <span>Hey, I've replied to your question! Let me know if you have any other queries!</span>
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item style="margin-top: 1rem">
+          <div style="display: flex; flex-direction: column; align-items: flex-end; text-align: right; width: 100%;">
+            <small>Me</small>
+            <div style="border-radius: 10px; background: #1d4ed8; padding: 8px; margin-top: 3px;">
+              <span>Do I do what is in the brackets first because of BODMAS?</span>
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item style="margin-top: 1rem">
           <div style="display: flex; flex-direction: column">
             <small>Mr Tan</small>
-            <span>Hey, I've replied to your question! Let me know if you have any other queries!</span>
+            <div style="border-radius: 10px; background: #047857; padding: 8px; margin-top: 3px;">
+              <span>Yes, that's correct!</span>
+            </div>
           </div>
         </ion-item>
 
         <ion-item style="margin-top: 1rem">
-          <div style="display: flex; flex-direction: column; text-align: right; width: 100%;">
+          <div style="display: flex; flex-direction: column; align-items: flex-end; text-align: right; width: 100%">
             <small>Me</small>
-            <span>Do I do what is in the brackets first because of BODMAS?</span>
-          </div>
-        </ion-item>
-
-        <ion-item style="margin-top: 1rem">
-          <div style="display: flex; flex-direction: column">
-            <small>Mr Tan</small>
-            <span>Yes, that's correct!</span>
-          </div>
-        </ion-item>
-
-        <ion-item style="margin-top: 1rem">
-          <div style="display: flex; flex-direction: column; text-align: right; width: 100%">
-            <small>Me</small>
-            <span>Ah, i see. Thanks!</span>
+            <div style="border-radius: 10px; background: #1d4ed8; padding: 8px; margin-top: 3px;">
+              <span>Ah, i see. Thanks!</span>
+            </div>
           </div>
         </ion-item>
       </ion-list>
@@ -54,7 +62,7 @@
         display: flex;
         align-items: center;
       ">
-          <ion-input style="height: 30px;" aria-label="Message" placeholder="Type a new message..."></ion-input>
+        <ion-input style="height: 30px;" aria-label="Message" placeholder="Type a new message..."></ion-input>
         <ion-button size="small">Send</ion-button>
       </div>
     </ion-content>
