@@ -17,7 +17,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-list>
+      <!-- <ion-list>
         <ion-item>
           <ion-label>Date</ion-label>
           <ion-datetime-button datetime="datetime"></ion-datetime-button>
@@ -26,26 +26,22 @@
             <ion-datetime presentation="date" id="datetime"></ion-datetime>
           </ion-modal>
         </ion-item>
-      </ion-list>
+      </ion-list> -->
 
       <ion-list>
         <ion-list-header>
-          <ion-label>Available slots</ion-label>
+          <ion-label>FSC's near you</ion-label>
         </ion-list-header>
 
         <ion-item-group>
-          <ion-item-divider>
-            <ion-label>Bishan FSC</ion-label>
-          </ion-item-divider>
-
-          <ion-item @click="book(idx.toString())" button v-for="time, idx in [
-            '10:30 - 12:30',
-            '12:30 - 14:30',
-            '14:30 - 16:30',
-            '16:30 - 18:30',
-            '18:30 - 20:30',
+          <ion-item v-for="time, idx in [
+            'Bishan FSC',
+            'Marymount FSC',
+            'Jurong FSC',
+            'Shunfu FSC'
           ]" :key="idx">
             <ion-label>{{ time }}</ion-label>
+            <ion-note>200m </ion-note>
           </ion-item>
         </ion-item-group>
       </ion-list>

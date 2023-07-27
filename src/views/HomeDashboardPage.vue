@@ -15,11 +15,10 @@
       <ion-card @click="findOasis">
         <ion-card-header>
           <ion-card-title>Find Oasis</ion-card-title>
-          <ion-card-subtitle>Find the nearest Oasis</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
-          Find the nearest Oasis for you. Remember to book a slot before heading down!
+          Find the Oasis closest to your home!
         </ion-card-content>
       </ion-card>
 
