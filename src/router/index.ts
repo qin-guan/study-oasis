@@ -31,6 +31,18 @@ const routes: Array<RouteRecordRaw> = [
     ],
   },
   {
+    path: '/home/chat/details',
+    component: () => import('@/views/HomeChatDetailsPage.vue')
+  },
+  {
+    path: '/home/book/:id',
+    component: () => import('@/views/HomeBookPage.vue')
+  },
+  {
+    path: '/home/find',
+    component: () => import('@/views/HomeFindPage.vue')
+  },
+  {
     path: '/home/help/:question',
     component: () => import('@/views/HomeHelpDetailsPage.vue'),
   },
